@@ -1,0 +1,124 @@
+h1 {
+    font-family: 'Lilita One', sans-serif !important;
+}
+h2{
+    font-size: 3em;
+}
+
+.nav {
+   background-color: #4a8f4e;
+    padding: 10px 20px;
+    position: fixed; /* Fixes the navbar to the top */
+    top: 0; /* Ensures it stays at the top of the viewport */
+    width: 100%; /* Makes the navbar span the full width of the page */
+    z-index: 1000; /* Ensures it stays above other elements */
+}
+
+.nav-item:hover {
+    background-color: #024725;
+    color: aliceblue !important;
+    border-radius: 1em;
+}
+
+.active {
+    background-color: #2b631f !important;
+}
+
+#bio {
+    width: 75%; /* Adjust width as needed */
+    margin: 0 auto; /* This centers the div */
+    text-align: center; /* Centers the text inside the div */
+    padding: 1em; /* Add some padding around the content */
+}
+
+
+#welcome {
+    position: relative;
+    text-align: center;  
+}
+
+
+.image-container {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.image-container img {
+    width: 100%;
+    height: 900px;
+    object-fit: cover;
+}
+#welcome_head{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    color:white;
+    font-size: 5em;
+}
+
+/*timeline */
+.timeline-container {
+    margin-top: 2em; /* Add some space above the timeline */
+    padding: 1em;
+}
+
+.timeline {
+    position: relative;
+    margin-top: 20px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: #2f1686;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.timeline-content {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+    margin-left: auto;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    margin-right: auto;
+}
+.btn{
+    display:inline-block;
+    width: 30%;
+    height: 10em;
+    margin:auto;
+}
+.btn:hover{
+    background-color:#4a8f4e;
+}
+.row_certs{
+    display:flex;
+    justify-content: center;
+    margin: auto;
+}
+.cert_heading{
+    display:flex;
+    justify-content:center;
+    margin:auto;
+    padding:auto;
+}
+
+
