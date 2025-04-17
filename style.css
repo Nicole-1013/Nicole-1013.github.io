@@ -26,9 +26,9 @@ h2{
 
 #bio {
     width: 75%; /* Adjust width as needed */
-    margin: 0 auto; /* This centers the div */
-    text-align: center; /* Centers the text inside the div */
-    padding: 1em; /* Add some padding around the content */
+    margin: 0 auto; 
+    text-align: center; 
+    padding: 1em; 
 }
 
 
@@ -59,7 +59,7 @@ h2{
     font-size: 5em;
 }
 
-/*timeline */
+/*timeline (all timeline related things AI)*/
 .timeline-container {
     margin-top: 2em; /* Add some space above the timeline */
     padding: 1em;
@@ -100,6 +100,8 @@ h2{
 .timeline-item:nth-child(even) .timeline-content {
     margin-right: auto;
 }
+
+
 .btn{
     display:inline-block;
     width: 30%;
@@ -120,5 +122,45 @@ h2{
     margin:auto;
     padding:auto;
 }
+
+/*project css*/
+.project-img{
+    width:300px;
+    height:300px;
+    border-radius: 50%;
+    display:block;
+   margin-left:auto;
+   margin-right:auto;
+   transition: filter 0.3s ease;
+}
+
+.project-img:hover{
+    filter:brightness(0.5);
+}
+
+.group-pic-but{
+    position:relative;
+    display:flex;
+    justify-content:center ;
+}
+.pr-but{
+    position:absolute;
+    top:50%;
+    right:50%;
+    height:75px;
+    width: 150px;
+    cursor: pointer;
+    display:flex;
+    opacity: 0;
+    transition:filter 0.3s ease;
+    align-items:center;
+    justify-content: center;
+    transition:opacity 0.3s ease;
+    z-index: 2;
+}
+.project-img:hover .pr-but {
+    opacity: 1; /* Visible on hover */
+}
+
 
 
