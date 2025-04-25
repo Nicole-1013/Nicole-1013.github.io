@@ -143,24 +143,24 @@ h2{
     display:flex;
     justify-content:center ;
 }
-.pr-but{
-    position:absolute;
-    top:50%;
-    right:50%;
-    height:75px;
-    width: 150px;
-    cursor: pointer;
-    display:flex;
+.pr-but {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     opacity: 0;
-    transition:filter 0.3s ease;
-    align-items:center;
-    justify-content: center;
-    transition:opacity 0.3s ease;
-    z-index: 2;
-}
-.project-img:hover .pr-but {
-    opacity: 1; /* Visible on hover */
-}
-
+    pointer-events: none; /* So the p doesn't interfere with hover */
+    transition: opacity 0.3s;
+    color: white;
+    font-size: 2em;
+  }
+  
+  .project-img:hover {
+    filter: brightness(0.5);
+  }
+  .project-img:hover + .pr-but{
+    opacity:1;
+    
+  }
 
 
