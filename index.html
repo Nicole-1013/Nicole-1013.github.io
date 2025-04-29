@@ -7,7 +7,7 @@
     <link href="style.css" rel="stylesheet">
     <script src="jquery-3.7.1.min.js"></script>
     <script src="work.js"></script>
-    <title>Portfolio Website</title>
+    <title>Nicole's Portfolio Website</title>
 </head>
 <body>
     <!--Navigation Bar-->
@@ -23,7 +23,7 @@
                 <a class="nav-link" href="#certifications">Certifications</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">Contact</a>
+                <a class="nav-link" href="#contact">Contact</a>
             </li>
         </ul>
     </div>
@@ -118,8 +118,24 @@
             <button id="comp_cert" type="button" class="btn btn-outline-success">Computational Thinking</button>
             <button id="data_cert" type="button" class="btn btn-outline-success">Databases(SQl)</button> 
         </div>
+        <br>
+        <div class="row_certs">
+            <button id="sofdev_cert" type="button" class="btn btn-outline-success">Software Development</button>
+        </div>
     </section>
-
+    <hr>
+    <section id="contact">
+        <h2 class="display-3 cert_heading">Contact Me</h2> 
+        <div>
+            <form action="https://formsubmit.co/ngalvan.ayon@gmail.com" method="POST">
+                <input type="text" name="First&nbsp;Name" placeholder="First Name"required>
+                <input type="text" name="Last&nbsp;Name" placeholder="LastName"required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="text" name="Comments" placeholder="Type here" required>
+                <button type="submit">Send</button>
+           </form>
+        </div>
+    </section>
 </body>
 </html>
 

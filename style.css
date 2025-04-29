@@ -157,10 +157,14 @@ h2{
   
   .project-img:hover {
     filter: brightness(0.5);
+    cursor: pointer;
   }
   .project-img:hover + .pr-but{
     opacity:1;
-    
+  }
+  #contact{
+    background-color: rgb(202, 218, 205);
+    border: 1em rgb(114, 172, 114) inset;
   }
 
 
