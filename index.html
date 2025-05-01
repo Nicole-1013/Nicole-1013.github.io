@@ -128,6 +128,11 @@
         <h2 class="display-3 cert_heading">Contact Me</h2> 
         <fieldset>
             <form action="https://formsubmit.co/ngalvan.ayon@gmail.com" method="POST">
+                <!--Honeypot-->
+                <input type="text" name="_honey" style="display:none;">
+
+                <!--Disable Captcha-->
+                <input type="hidden" name="_captcha" value="false">
                 <div class="mb-3" >
                     <label for="FirstName" class="form-label">First Name</label>
                     <input class="form-control" type="text" name="First&nbsp;Name" placeholder="FirstName"required>
