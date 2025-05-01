@@ -31,7 +31,7 @@
     <section id="welcome" class="content">
         <div class="image-container">
             <img id="revolving-image" src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg" alt="Welcome Image">
-            <h1 id="welcome_head">Welcome!</h1>
+            <h1 id="welcome_head">Welcome!(UNDER CONSTRUCTION)</h1>
         </div>
        
     </section>
@@ -126,15 +126,28 @@
     <hr>
     <section id="contact">
         <h2 class="display-3 cert_heading">Contact Me</h2> 
-        <div>
+        <fieldset>
             <form action="https://formsubmit.co/ngalvan.ayon@gmail.com" method="POST">
-                <input type="text" name="First&nbsp;Name" placeholder="First Name"required>
-                <input type="text" name="Last&nbsp;Name" placeholder="LastName"required>
-                <input type="email" name="email" placeholder="Email" required>
-                <input type="text" name="Comments" placeholder="Type here" required>
+                <div class="mb-3" >
+                    <label for="FirstName" class="form-label">First Name</label>
+                    <input class="form-control" type="text" name="First&nbsp;Name" placeholder="FirstName"required>
+                </div>
+               <div class="mb-3">
+                    <label for="LastName" class="form-label">Last Name</label>
+                    <input  class="form-control" type="text" name="Last&nbsp;Name" placeholder="LastName"required>
+               </div>
+               <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input  class="form-control" type="email" name="email" placeholder="Email" required>
+               </div>
+                <div class="mb-3">
+                    <label for="Comments" class="form-label">Message</label>
+                    <textarea  class="form-control" id="commentbox" name="Comments" placeholder="Type here" required></textarea>
+                </div>
                 <button type="submit">Send</button>
            </form>
-        </div>
+        </fieldset>
+            
     </section>
 </body>
 </html>

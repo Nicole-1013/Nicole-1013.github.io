@@ -166,5 +166,17 @@ h2{
     background-color: rgb(202, 218, 205);
     border: 1em rgb(114, 172, 114) inset;
   }
+  #commentbox{
+    overflow-y: auto;
+    height: 40%;
+    resize: none;
+  }
+  .contactInfo{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .form-control{
+    width: 50%;
+  }
 
 
