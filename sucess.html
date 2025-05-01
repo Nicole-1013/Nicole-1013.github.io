@@ -8,6 +8,17 @@
     <script src="jquery-3.7.1.min.js"></script>
     <script src="work.js"></script>
     <title>Nicole's Portfolio Website</title>
+    <script>
+        $(function(){
+            var offset = 60; // Height of your fixed navbar in pixels
+            var target = $('#contact');
+            if (target.length) {
+                $('html, body').animate({
+                    scrollTop: target.offset().top - offset
+                }, 800); // 800ms for smooth scroll
+            }
+        });
+    </script>
 </head>
 <body>
     <!--Navigation Bar-->
