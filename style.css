@@ -102,13 +102,13 @@ h2{
 }
 
 
-.btn{
+.cert{
     display:inline-block;
     width: 30%;
     height: 10em;
     margin:auto;
 }
-.btn:hover{
+.cert:hover{
     background-color:#4a8f4e;
 }
 .row_certs{
@@ -165,18 +165,22 @@ h2{
   #contact{
     background-color: rgb(202, 218, 205);
     border: 1em rgb(114, 172, 114) inset;
+    height:auto;
   }
   #commentbox{
     overflow-y: auto;
-    height: 40%;
+    height: 10rem;
     resize: none;
   }
-  .contactInfo{
-    display: flex;
-    flex-wrap: wrap;
-  }
+
   .form-control{
     width: 50%;
   }
 
-
+.contact_field{
+    margin: 2rem !important;
+}
+#comment-btn{
+    background-color:#046b38 !important;
+    border-color:#024725 !important;
+}

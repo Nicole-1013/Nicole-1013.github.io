@@ -78,8 +78,12 @@
         <div class="row">
             <div class="col">
                 <div class="group-pic-but">
-                    <img class="project-img" src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg"><!--placeholder img-->
-                    <p class="pr-but">Click here!</p>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#hangmanModal">
+                        <img class="project-img"src= "https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg" alt="Hangman Game" style="cursor:pointer;" />
+                     <p class="pr-but">Click here!</p>
+                    </a>
+               <!--placeholder img-->
+                   
                 </div>
                 <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia officia quis cupiditate voluptates voluptatem ratione nisi maxime optio fuga natus? Vel repellendus officiis, ut eos explicabo esse harum quaerat hic.</p>
             </div>
@@ -108,25 +112,25 @@
         <h2 class="display-3 cert_heading">Certifications</h2> 
         <br>   
         <div class="row_certs">
-            <button id="py_cert" type="button" class="btn btn-outline-success">Python</button>
-            <button id="htm_cert" type="button" class="btn btn-outline-success">HTML/CSS</button>
-            <button id="js_cert" type="button" class="btn btn-outline-success" >Javascript</button>
+            <button id="py_cert" type="button" class="btn cert btn-outline-success" data-doc="certifications\python_cert.png">Python</button>
+            <button id="htm_cert" type="button" class="btn cert btn-outline-success" data-doc="certifications\html-css_cert.png">HTML/CSS</button>
+            <button id="js_cert" type="button" class="btn cert btn-outline-success" data-doc="certifications\js_cert.png">Javascript</button>
         </div>
         <br>
         <div class="row_certs">
-            <button id="java_cert" type="button" class="btn btn-outline-success">Java</button>
-            <button id="comp_cert" type="button" class="btn btn-outline-success">Computational Thinking</button>
-            <button id="data_cert" type="button" class="btn btn-outline-success">Databases(SQl)</button> 
+            <button id="java_cert" type="button" class="btn cert btn-outline-success" data-doc="certifications\java_cert.png">Java</button>
+            <button id="comp_cert" type="button" class="btn cert btn-outline-success" data-doc="certifications\compThink_cert.png">Computational Thinking</button>
+            <button id="data_cert" type="button" class="btn cert btn-outline-success" data-doc="certifications\sql_cert.png">Databases(SQl)</button> 
         </div>
         <br>
         <div class="row_certs">
-            <button id="sofdev_cert" type="button" class="btn btn-outline-success">Software Development</button>
+            <button id="sofdev_cert" type="button" class="btn cert btn-outline-success" data-doc="certifications\softdev_cert.png">Software Development</button>
         </div>
     </section>
     <hr>
     <section id="contact">
         <h2 class="display-3 cert_heading">Contact Me</h2> 
-        <fieldset>
+        <fieldset class="contact_field">
             <form action="https://formsubmit.co/ngalvan.ayon@gmail.com" method="POST">
                 <!--Honeypot-->
                 <input type="text" name="_honey" style="display:none;">
@@ -150,11 +154,33 @@
                     <textarea  class="form-control" id="commentbox" name="Comments" placeholder="Type here" required></textarea>
                     <label for="Comments" class="form-label">Message</label>
                 </div>
-                <button type="submit">Send</button>
+                <button type="submit" id="comment-btn"class="btn btn-primary">Send</button>
            </form>
         </fieldset>
             
     </section>
+<!-- Modal -->
+<div class="modal fade" id="hangmanModal" tabindex="-1" aria-labelledby="hangmanModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="hangmanModalLabel">Hangman Game</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="hangman-close-btn"></button>
+        </div>
+        <div class="modal-body">
+          <div id="hangman-loading" style="display:none;">Loading Python engine...</div>
+          <div id="hangman-game-container">
+            <div id="hangman-output" style="background:#f9f9f9; min-height:160px; border-radius:6px; padding:1rem; font-family:monospace;"></div>
+            <input type="text" id="hangman-input" maxlength="1" class="form-control d-inline-block" style="width:60px; margin-right:10px;" placeholder="A-Z">
+            <button id="hangman-guess-btn" class="btn btn-success">Guess</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Pyodide -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/pyodide/v0.25.1/full/pyodide.js"></script>
 </body>
 </html>
 
