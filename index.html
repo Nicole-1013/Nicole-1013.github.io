@@ -112,6 +112,10 @@
         <h2 class="display-3 cert_heading">Certifications</h2> 
         <br>   
         <div class="row_certs">
+            <button id="tsa_cert" type="button" class="btn cert btn-outline-success" data-doc="certifications\softdev_cert.png">Software & App Design Fundamental Certification (TSA)</button>
+        </div>
+        <br>
+        <div class="row_certs">
             <button id="py_cert" type="button" class="btn cert btn-outline-success" data-doc="certifications\python_cert.png">Python</button>
             <button id="htm_cert" type="button" class="btn cert btn-outline-success" data-doc="certifications\html-css_cert.png">HTML/CSS</button>
             <button id="js_cert" type="button" class="btn cert btn-outline-success" data-doc="certifications\js_cert.png">Javascript</button>
@@ -159,7 +163,7 @@
         </fieldset>
             
     </section>
-<!-- Modal -->
+<!-- Hangman Game Modal -->
 <div class="modal fade" id="hangmanModal" tabindex="-1" aria-labelledby="hangmanModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
@@ -173,6 +177,7 @@
             <div id="hangman-output" style="background:#f9f9f9; min-height:160px; border-radius:6px; padding:1rem; font-family:monospace;"></div>
             <input type="text" id="hangman-input" maxlength="1" class="form-control d-inline-block" style="width:60px; margin-right:10px;" placeholder="A-Z">
             <button id="hangman-guess-btn" class="btn btn-success">Guess</button>
+            <button id="hangman-playAgain-btn" class="btn btn-success" style="display:none;">Play Again?</button>
           </div>
         </div>
       </div>

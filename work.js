@@ -102,30 +102,36 @@ def update_display(state):
             input.val("");
             return;
         }
-        hangmanState.turns += 1;
+        if(result === "wrong"){
+            hangmanState.set('turns', hangmanState.get('turns') +1);
+        }
+        if (hangmanState.get('turns') >= hangmanState.get('max_turns')) {
+            updateHangmanDisplay("💀 Game over! The word was: " + hangmanState.get('correct_word').join(''));
+            $("#hangman-guess-btn").prop("disabled", true);
+            input.prop("disabled", true);
+            $("#hangman-playAgain-btn").show();
+            return;
+        }
         if (pyodideHangman.globals.get('check_win')(hangmanState)) {
             updateHangmanDisplay("🎉 Hooray! You won!");
             $("#hangman-guess-btn").prop("disabled", true);
             input.prop("disabled", true);
             return;
-        } else if (hangmanState.turns >= hangmanState.max_turns) {
-            updateHangmanDisplay("💀 Game over! The word was: " + hangmanState.correct_word.join(''));
-            $("#hangman-guess-btn").prop("disabled", true);
-            input.prop("disabled", true);
-            return;
-        }
-        
+        } 
+        updateHangmanDisplay();
         input.val("");
     }
 
     function resetHangman() {
         if (!pyodideHangman) return;
         hangmanState = pyodideHangman.globals.get('new_game')();
+        $("#hangman-playAgain-btn").hide();
         updateHangmanDisplay();
         $("#hangman-guess-btn").prop("disabled", false);
         $("#hangman-input").prop("disabled", false).val("").focus();
     }
 
+    $("#hangman-playAgain-btn").on("click", resetHangman);
     // When modal opens, load Pyodide and start game
     $('#hangmanModal').on('show.bs.modal', function () {
         if (!hangmanLoaded) {
@@ -141,6 +147,4 @@ def update_display(state):
         if (e.key === "Enter") hangmanGuess();
     });
     $("#hangman-close-btn").on("click", resetHangman);
-
-    // ... your existing code ...
 });

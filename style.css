@@ -122,6 +122,9 @@ h2{
     margin:auto;
     padding:auto;
 }
+#tsa_cert{
+    width: 100%;
+}
 
 /*project css*/
 .project-img{
