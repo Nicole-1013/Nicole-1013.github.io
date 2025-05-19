@@ -116,6 +116,7 @@ def update_display(state):
             updateHangmanDisplay("🎉 Hooray! You won!");
             $("#hangman-guess-btn").prop("disabled", true);
             input.prop("disabled", true);
+            $("#hangman-playAgain-btn").show();
             return;
         } 
         updateHangmanDisplay();

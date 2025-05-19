@@ -123,7 +123,7 @@ h2{
     padding:auto;
 }
 #tsa_cert{
-    width: 100%;
+    width: 100% !important;
 }
 
 /*project css*/
